@@ -19,8 +19,11 @@ body, h1 {
 }
 
 #title {
+    position: fixed;
+    top: 0px;
     padding: 15px 24px;
     font-size: 24px;
+    animation: slideleft .5s;
 }
 
 .text-center {
@@ -43,10 +46,24 @@ h1.jumbo {
 
 .animatetop {
     position: relative;
-    animation: animatetop 0.4s;
+    animation: slidetop 0.4s;
 }
 
-@keyframes animatetop {
+.zoom {
+    animation: zoom 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    } 
+    
+    to {
+        transform: scale(100%);
+    }
+}
+
+@keyframes slidetop {
     from {
         top: -240px;
     } 
@@ -56,13 +73,23 @@ h1.jumbo {
     }
 }
 
+@keyframes slideleft {
+    from {
+        left: -200px;
+    } 
+    
+    to {
+        left: 0;
+    }
+}
+
 @keyframes opac {
     0% {
         opacity: 0;
     } 
 
     20% {
-        opacity: 0;
+        opacity: 0.1;
     }
     
     100% {
