@@ -1,0 +1,59 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    color: white;
+    background-color: black;
+    animation: opac 0.8s;
+}
+
+body, h1 {
+    font-family: "Raleway", sans-serif;
+}
+
+#container {
+    height: 100%;
+}
+
+#title {
+    padding: 15px 24px;
+    font-size: 24px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.middle {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-46%,-50%);
+}
+
+h1.jumbo {
+    font-size: 40px;
+    font-weight: 400;
+    margin: 10px 0;
+    height: 72px;
+}
+
+.animatetop {
+    position: relative;
+    animation: animatetop 0.4s;
+}
+
+@keyframes animatetop {
+    from {
+        top:-300px;
+        opacity:0
+    } 
+    
+    to {
+        top:0;
+        opacity:1
+    }
+}
